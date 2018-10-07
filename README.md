@@ -3,6 +3,7 @@
 API para realizar a interface de envio de SMS com a DLL BookingNotificationSMS.dll da QuadLabs.
 
 Exemplo de request:
+```
 {
 	"CustomerName": "José da Silva",
 	"BranchId": 1,
@@ -11,3 +12,4 @@ Exemplo de request:
 	"Phone": "(11) 99999-9999",
 	"ProductType": 0
 }
+```
