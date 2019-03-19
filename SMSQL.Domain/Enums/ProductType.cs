@@ -17,6 +17,11 @@
         /// </summary>
         CCR = 2,
 
-        Default = 3
+		/// <summary>
+		/// Activities
+		/// </summary>
+		SSG = 3,
+
+		Default = 4
     }
 }
