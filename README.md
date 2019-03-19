@@ -10,6 +10,6 @@ Exemplo de request:
 	"BookingRef": 216516,
 	"BPoints": 7800,
 	"Phone": "(11) 99999-9999",
-	"ProductType": 0
+	"ProductType": 1
 }
 ```
