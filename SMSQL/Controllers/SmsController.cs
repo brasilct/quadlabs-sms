@@ -3,7 +3,6 @@ using SMSQL.Domain.Interfaces;
 using SMSQL.Domain.Models;
 using SMSQL.Domain.Models.Request;
 using SMSQL.Domain.Models.Response;
-using SMSQL.Repository.Repositories;
 using System;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -14,7 +13,7 @@ using System.Web.Http;
 
 namespace SMSQL.Controllers
 {
-    public class SmsController : ApiController
+	public class SmsController : ApiController
     {
 		ISmsApp smsApp = new SmsApp();
 
