@@ -1,7 +1,9 @@
-﻿using SMSQL.Domain.Interfaces;
+﻿using SMSQL.App;
+using SMSQL.Domain.Interfaces;
 using SMSQL.Domain.Models;
 using SMSQL.Domain.Models.Request;
 using SMSQL.Domain.Models.Response;
+using SMSQL.Repository.Repositories;
 using System;
 using System.Threading.Tasks;
 using System.Web.Http;
@@ -14,12 +16,7 @@ namespace SMSQL.Controllers
 {
     public class SmsController : ApiController
     {
-        private readonly ISmsApp _smsApp;
-
-        public SmsController(ISmsApp smsApp)
-        {
-            _smsApp = smsApp;
-        }
+		ISmsApp smsApp = new SmsApp();
 
         [HttpPost]
         public async Task<ApiResponse<SmsStatusResponse>> Send([FromBody]SmsRequest sms)
@@ -28,7 +25,7 @@ namespace SMSQL.Controllers
             {
                 var response = new ApiResponse<SmsStatusResponse>
                 {
-                    Data = await _smsApp.Send(sms)
+                    Data = await smsApp.Send(sms)
                 };
 
                 return response;

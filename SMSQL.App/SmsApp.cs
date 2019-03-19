@@ -2,17 +2,14 @@
 using SMSQL.Domain.Interfaces;
 using SMSQL.Domain.Models.Request;
 using SMSQL.Domain.Models.Response;
+using SMSQL.Repository.Repositories;
 using System.Threading.Tasks;
 
 namespace SMSQL.App
 {
     public class SmsApp : ISmsApp
     {
-        private readonly ISmsRepository _smsRepository;
-        public SmsApp(ISmsRepository smsRepository)
-        {
-            _smsRepository = smsRepository;
-        }
+        ISmsRepository _smsRepository = new SmsRepository();
 
         public async Task<SmsStatusResponse> Send(SmsRequest sms)
         {

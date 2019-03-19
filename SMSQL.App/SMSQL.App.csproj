@@ -48,6 +48,10 @@
       <Project>{22B7B3A6-AA6E-4003-BEB9-C4DF4B11CF23}</Project>
       <Name>SMSQL.Domain</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SMSQL.Repository\SMSQL.Repository.csproj">
+      <Project>{EDDA3D4D-E8E0-406A-A10D-96BC9208E180}</Project>
+      <Name>SMSQL.Repository</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
