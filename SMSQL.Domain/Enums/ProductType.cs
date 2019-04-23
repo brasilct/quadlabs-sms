@@ -22,6 +22,6 @@
 		/// </summary>
 		SSG = 3,
 
-		Default = 4
+		TRF = 4
     }
 }
